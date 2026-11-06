@@ -28,7 +28,7 @@ export default function About({ title, description, images }: AboutProps) {
                         style={{ color: ABOUT_TEXT_COLOR }}
                     >
                         {titleLines.map((line, i) => (
-                            <span key={i} className="block">
+                            <span key={i} className="block leading-[1.5] md:leading-[100px]">
                                 {line}
                             </span>
                         ))}
