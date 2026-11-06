@@ -26,7 +26,7 @@ export default function Header() {
                         <Link
                             key={link.label}
                             href={link.href}
-                            className={`h-[36px] shrink-0 whitespace-nowrap ${HEADER_LINK_TYPOGRAPHY} transition-opacity hover:opacity-70`}
+                            className={`h-9 shrink-0 whitespace-nowrap ${HEADER_LINK_TYPOGRAPHY} transition-opacity hover:opacity-70`}
                             style={{ color: HEADER_TEXT_COLOR }}
                         >
                             {link.label}
