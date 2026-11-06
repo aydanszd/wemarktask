@@ -8,7 +8,7 @@ import { HEADER_LINK_TYPOGRAPHY } from "@/src/typography";
 export default function Header() {
     return (
         <header className="absolute inset-x-0 top-0 z-20">
-            <div className="mx-auto mt-6 flex h-9 w-[calc(100%-3rem)] max-w-[1320px] items-center justify-between md:mt-10.5">
+            <div className="mx-auto mt-6 flex h-9 w-[calc(100%-3rem)] max-w-330 items-center justify-between md:mt-10.5">
                 <Link href="/" aria-label="Wemark">
                     <Image
                         src={logo}
@@ -25,7 +25,7 @@ export default function Header() {
                         <Link
                             key={link.label}
                             href={link.href}
-                            className={`h-[36px] shrink-0 whitespace-nowrap ${HEADER_LINK_TYPOGRAPHY} transition-opacity hover:opacity-70`}
+                            className={`h-9 shrink-0 whitespace-nowrap ${HEADER_LINK_TYPOGRAPHY} transition-opacity hover:opacity-70`}
                             style={{ color: HEADER_TEXT_COLOR }}
                         >
                             {link.label}
@@ -35,7 +35,7 @@ export default function Header() {
 
                 <Link
                     href="#contact"
-                    className={`hidden h-[36px] w-[100px] ${HEADER_LINK_TYPOGRAPHY} underline transition-opacity hover:opacity-70 lg:block`}
+                    className={`hidden h-9 w-25 ${HEADER_LINK_TYPOGRAPHY} underline transition-opacity hover:opacity-70 lg:block`}
                     style={{ color: HEADER_TEXT_COLOR }}
                 >
                     Let&apos;s Talk
