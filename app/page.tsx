@@ -5,6 +5,7 @@ import About from "@/src/sections/about/about";
 import Founder from "@/src/sections/founder/founder";
 import Programs from "@/src/sections/programs/programs";
 import Quotes from "@/src/sections/slider/slider";
+import Faq from "@/src/sections/questions/questions";
 
 export default async function Home() {
   const data = await getXSchool();
@@ -21,6 +22,7 @@ export default async function Home() {
       <Founder founders={data.founders} />
       <Programs programs={data.programs} />
       <Quotes textSlider={data.text_slider} />
+      <Faq title={data.faq_title} items={data.xschool_faq} />
     </main>
   );
 }
