@@ -46,7 +46,7 @@ export default function Founder({ founders }: FounderProps) {
                                 </figcaption>
                             </figure>
                             <div className="flex max-w-[682px] flex-col gap-[21px]">
-                                <h3 className="text-[28px] font-medium uppercase leading-[1.4] text-[#14141A] md:text-[36px] md:leading-[62px]">
+                                <h3 className="text-[20px] font-medium uppercase leading-[1.4] text-[#14141A] md:text-[36px] md:leading-[62px]">
                                     {founder.title}
                                 </h3>
                                 <div className="space-y-6 text-[20px] font-normal leading-[1.5] text-[#141414] md:text-[30px] md:leading-[44px]">
