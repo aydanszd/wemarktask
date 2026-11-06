@@ -2,8 +2,11 @@ import Header from "@/src/layout/Header/header";
 import Banner from "@/src/sections/herobanner/hero";
 import { getXSchool } from "@/src/api/herobanner/herobanner";
 import About from "@/src/sections/about/about";
+import Founder from "@/src/sections/founder/founder";
+
 export default async function Home() {
   const data = await getXSchool();
+
   return (
     <main className="relative">
       <Header />
@@ -13,6 +16,7 @@ export default async function Home() {
         description={data.about_description}
         images={data.about_images}
       />
+      <Founder founders={data.founders} />
     </main>
   );
 }
