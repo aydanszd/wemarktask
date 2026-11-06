@@ -10,7 +10,7 @@ export default async function Home() {
   const data = await getXSchool();
 
   return (
-    <main className="relative">
+    <main className="relative bg-[#E0E0E0]">
       <Header />
       <Banner title={data.banner_title} image={data.banner_image} />
       <About

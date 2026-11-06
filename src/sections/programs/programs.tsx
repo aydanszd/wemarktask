@@ -33,7 +33,7 @@ export default function Programs({ programs }: ProgramsProps) {
 
     return (
         <section
-            className="py-20"
+            className="py-20 "
             style={{
                 backgroundColor: PROGRAMS_BACKGROUND_COLOR,
                 color: PROGRAMS_TEXT_COLOR,

@@ -1,6 +1,11 @@
 import Image from "next/image";
 import star from "@/src/assets/_.svg";
-import { SLIDER_BACKGROUND_COLOR, SLIDER_TEXT_COLOR } from "@/src/color";
+import {
+    SLIDER_BACKGROUND_COLOR,
+    SLIDER_SEPARATOR_COLOR,
+    SLIDER_TEXT_COLOR,
+} from "@/src/color";
+import { SLIDER_TEXT_TYPOGRAPHY } from "@/src/typography";
 import type { TextSliderProps } from "@/src/types";
 
 function MarqueeRow({
@@ -17,7 +22,10 @@ function MarqueeRow({
             className="marquee-group"
         >
             {items.map((text, i) => (
-                <span key={`${key}-${i}`} className="marquee-item">
+                <span
+                    key={`${key}-${i}`}
+                    className={`marquee-item ${SLIDER_TEXT_TYPOGRAPHY}`}
+                >
                     <span>{text}</span>
                     <Image
                         src={star}
@@ -57,12 +65,20 @@ export default function Quotes({ textSlider }: TextSliderProps) {
     return (
         <section
             aria-label="Our values"
-            className="w-full overflow-hidden border-y border-[#141414]/50"
-            style={{ backgroundColor: SLIDER_BACKGROUND_COLOR, color: SLIDER_TEXT_COLOR }}
+            className="-mt-12.5 w-full overflow-hidden border-y md:mt-[50px]"
+            style={{
+                backgroundColor: SLIDER_BACKGROUND_COLOR,
+                borderColor: SLIDER_SEPARATOR_COLOR,
+                color: SLIDER_TEXT_COLOR,
+            }}
         >
             <span className="sr-only">{items.join(", ")}</span>
             <MarqueeRow items={items} />
-            <div className="h-px bg-[#141414]/50" aria-hidden="true" />
+            <div
+                className="h-px"
+                style={{ backgroundColor: SLIDER_SEPARATOR_COLOR }}
+                aria-hidden="true"
+            />
             <MarqueeRow items={secondRow} reverse />
         </section>
     );
