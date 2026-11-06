@@ -47,7 +47,7 @@ body {
   line-height: 36px;
   margin: 80px 0 32px;
   text-transform: uppercase;
-  color: #14141a;
+  color: inherit;
 }
 
 .programs-content ul {
@@ -68,5 +68,69 @@ body {
   .programs-content h3 {
     font-size: 36px;
     line-height: 62px;
+  }
+}
+
+.quotes-marquee {
+  overflow: hidden;
+}
+
+.marquee-row {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-track.marquee-reverse {
+  animation-direction: reverse;
+}
+
+.marquee-group {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  gap: 32px;
+  padding-right: 32px;
+}
+
+.marquee-item {
+  align-items: center;
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 32px;
+  padding-right: 32px;
+  white-space: nowrap;
+  font-family: var(--font-tt-hoves), Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 76px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #14141a;
+}
+
+.marquee-star {
+  display: block;
+  flex: 0 0 auto;
+  height: 22px;
+  width: 23px;
+}
+
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
