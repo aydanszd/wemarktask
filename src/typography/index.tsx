@@ -34,3 +34,12 @@ export const FAQ_TITLE_TYPOGRAPHY = ABOUT_TITLE_TYPOGRAPHY;
 
 export const FAQ_TEXT_TYPOGRAPHY =
     "[font-family:var(--font-tt-hoves)] text-[30px] font-normal leading-[44px]";
+
+export const FOOTER_TITLE_TYPOGRAPHY =
+    "[font-family:var(--font-tt-hoves)] text-[30px] font-medium leading-[44px] capitalize";
+
+export const FOOTER_LINK_TYPOGRAPHY =
+    "[font-family:var(--font-tt-hoves)] text-[24px] font-medium leading-[36px]";
+
+export const FOOTER_BOTTOM_TYPOGRAPHY =
+    "[font-family:var(--font-tt-hoves)] text-[16px] font-normal leading-[32px] uppercase";
