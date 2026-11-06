@@ -1,0 +1,1 @@
+export const HEADER_TEXT_COLOR = "#E0E0E0";

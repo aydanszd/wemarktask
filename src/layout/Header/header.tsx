@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/src/assets/logo (4).svg";
-
-const links = [
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Career", href: "#career" },
-    { label: "Blog", href: "#blog" },
-    { label: "xSchool", href: "#xschool" },
-];
+import { HEADER_TEXT_COLOR } from "@/src/color";
+import { HEADER_LINKS } from "@/src/const";
+import { HEADER_LINK_TYPOGRAPHY } from "@/src/typography";
 
 export default function Header() {
     return (
@@ -27,11 +21,12 @@ export default function Header() {
                 </Link>
 
                 <nav className="hidden items-center gap-12.5 lg:flex ">
-                    {links.map((link) => (
+                    {HEADER_LINKS.map((link) => (
                         <Link
                             key={link.label}
                             href={link.href}
-                            className="h-[36px] shrink-0 whitespace-nowrap text-[24px] font-medium text-[#E0E0E0] transition-opacity hover:opacity-70"
+                            className={`h-[36px] shrink-0 whitespace-nowrap ${HEADER_LINK_TYPOGRAPHY} transition-opacity hover:opacity-70`}
+                            style={{ color: HEADER_TEXT_COLOR }}
                         >
                             {link.label}
                         </Link>
@@ -40,7 +35,8 @@ export default function Header() {
 
                 <Link
                     href="#contact"
-                    className="hidden text-[24px] w-[100px] font-medium h-[36px] text-[#E0E0E0] underline transition-opacity hover:opacity-70 lg:block"
+                    className={`hidden h-[36px] w-[100px] ${HEADER_LINK_TYPOGRAPHY} underline transition-opacity hover:opacity-70 lg:block`}
+                    style={{ color: HEADER_TEXT_COLOR }}
                 >
                     Let&apos;s Talk
                 </Link>
@@ -50,8 +46,8 @@ export default function Header() {
                     aria-label="Open menu"
                     className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
                 >
-                    <span className="h-0.5 w-6 bg-[#E0E0E0]" />
-                    <span className="h-0.5 w-6 bg-[#E0E0E0]" />
+                    <span className="h-0.5 w-6" style={{ backgroundColor: HEADER_TEXT_COLOR }} />
+                    <span className="h-0.5 w-6" style={{ backgroundColor: HEADER_TEXT_COLOR }} />
                 </button>
             </div>
         </header>
