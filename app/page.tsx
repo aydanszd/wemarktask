@@ -1,6 +1,6 @@
 import Header from "@/src/layout/Header/header";
 import Banner from "@/src/sections/herobanner/hero";
-import { getXSchool } from "@/src/api/herobanner/herobanner";
+import { getXSchool } from "@/src/services";
 import About from "@/src/sections/about/about";
 import Founder from "@/src/sections/founder/founder";
 import Programs from "@/src/sections/programs/programs";
