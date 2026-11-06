@@ -4,11 +4,7 @@ export type HeroBannerProps = {
 };
 
 import type { FounderData } from "@/src/types/founder";
-
-export type ProgramData = {
-    title: string;
-    description: string;
-};
+import type { ProgramData } from "@/src/types/programs";
 
 export type FaqData = {
     question: string;

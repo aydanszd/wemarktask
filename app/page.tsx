@@ -3,6 +3,7 @@ import Banner from "@/src/sections/herobanner/hero";
 import { getXSchool } from "@/src/api/herobanner/herobanner";
 import About from "@/src/sections/about/about";
 import Founder from "@/src/sections/founder/founder";
+import Programs from "@/src/sections/programs/programs";
 
 export default async function Home() {
   const data = await getXSchool();
@@ -17,6 +18,7 @@ export default async function Home() {
         images={data.about_images}
       />
       <Founder founders={data.founders} />
+      <Programs programs={data.programs} />
     </main>
   );
 }

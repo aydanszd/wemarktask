@@ -23,3 +23,50 @@ body {
   color: var(--foreground);
   font-family: var(--font-tt-hoves), Arial, Helvetica, sans-serif;
 }
+
+.programs-content {
+  font-family: var(--font-tt-hoves), Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.programs-content p,
+.programs-content ul {
+  margin: 0 0 32px;
+}
+
+.programs-content strong {
+  font-weight: 500;
+}
+
+.programs-content h3 {
+  font-family: var(--font-tt-hoves), Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin: 80px 0 32px;
+  text-transform: uppercase;
+  color: #14141a;
+}
+
+.programs-content ul {
+  list-style: disc;
+  padding-left: 44px;
+}
+
+.programs-content li {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .programs-content {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  .programs-content h3 {
+    font-size: 36px;
+    line-height: 62px;
+  }
+}
