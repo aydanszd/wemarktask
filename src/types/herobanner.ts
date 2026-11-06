@@ -3,20 +3,8 @@ export type HeroBannerProps = {
     image: string;
 };
 
-export type FounderData = {
-    title: string;
-    description: string;
-    name: string;
-    position: string;
-    image: string;
-    linkedin_url: string;
-    instagram_url: string;
-};
-
-export type ProgramData = {
-    title: string;
-    description: string;
-};
+import type { FounderData } from "@/src/types/founder";
+import type { ProgramData } from "@/src/types/programs";
 
 export type FaqData = {
     question: string;
