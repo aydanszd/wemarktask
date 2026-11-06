@@ -1,7 +1,7 @@
 import Image from "next/image";
 import star from "@/src/assets/_.svg";
 import { SLIDER_BACKGROUND_COLOR, SLIDER_TEXT_COLOR } from "@/src/color";
-import type { TextSliderData } from "@/src/types/herobanner";
+import type { TextSliderProps } from "@/src/types";
 
 function MarqueeRow({
     items,
@@ -47,7 +47,7 @@ function MarqueeRow({
     );
 }
 
-export default function Quotes({ textSlider }: { textSlider: TextSliderData }) {
+export default function Quotes({ textSlider }: TextSliderProps) {
     const items = Object.values(textSlider).filter((text) => text.trim());
 
     if (items.length === 0) return null;
