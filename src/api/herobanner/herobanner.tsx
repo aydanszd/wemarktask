@@ -1,4 +1,4 @@
-import type { XSchoolData } from "@/src/types/herobanner";
+import type { XSchoolData } from "@/src/types";
 import { apiGet } from "@/src/api";
 
 const BASE_URL =

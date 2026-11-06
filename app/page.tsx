@@ -4,12 +4,13 @@ import { getXSchool } from "@/src/api/herobanner/herobanner";
 import About from "@/src/sections/about/about";
 import Founder from "@/src/sections/founder/founder";
 import Programs from "@/src/sections/programs/programs";
+import Quotes from "@/src/sections/slider/slider";
 
 export default async function Home() {
   const data = await getXSchool();
 
   return (
-    <main className="relative">
+    <main className="relative bg-[#E0E0E0]">
       <Header />
       <Banner title={data.banner_title} image={data.banner_image} />
       <About
@@ -19,6 +20,7 @@ export default async function Home() {
       />
       <Founder founders={data.founders} />
       <Programs programs={data.programs} />
+      <Quotes textSlider={data.text_slider} />
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { HeroBannerProps } from "@/src/types/herobanner";
+import type { HeroBannerProps } from "@/src/types";
 
 export default function Banner({ title, image }: HeroBannerProps) {
     const lines = title

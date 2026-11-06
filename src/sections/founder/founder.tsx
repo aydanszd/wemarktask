@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { FounderProps } from "@/src/types/founder";
+import type { FounderProps } from "@/src/types";
 import { FOUNDER_TITLE_TYPOGRAPHY } from "@/src/typography";
 import { ABOUT_BACKGROUND_COLOR, ABOUT_TEXT_COLOR } from "@/src/color";
 

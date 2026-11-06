@@ -1,4 +1,4 @@
-import type { ProgramsProps } from "@/src/types/programs";
+import type { ProgramsProps } from "@/src/types";
 import { PROGRAMS_BACKGROUND_COLOR, PROGRAMS_TEXT_COLOR } from "@/src/color";
 import { PROGRAMS_TITLE_TYPOGRAPHY } from "@/src/typography";
 const toHeadings = (html: string): string =>
@@ -33,7 +33,7 @@ export default function Programs({ programs }: ProgramsProps) {
 
     return (
         <section
-            className="py-20"
+            className="py-20 "
             style={{
                 backgroundColor: PROGRAMS_BACKGROUND_COLOR,
                 color: PROGRAMS_TEXT_COLOR,
