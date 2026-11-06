@@ -5,12 +5,8 @@ export type HeroBannerProps = {
 
 import type { FounderData } from "@/src/types/founder";
 import type { ProgramData } from "@/src/types/programs";
+import type { FaqData } from "@/src/types/questions";
 import type { TextSliderData } from "@/src/types/slider";
-
-export type FaqData = {
-    question: string;
-    answer: string;
-};
 
 export type XSchoolData = {
     banner_title: string;
