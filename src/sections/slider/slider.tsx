@@ -65,7 +65,7 @@ export default function Quotes({ textSlider }: TextSliderProps) {
     return (
         <section
             aria-label="Our values"
-            className="-mt-12.5 w-full overflow-hidden border-y md:mt-[50px]"
+            className="-mt-12.5 mb-40 mt-2 w-full overflow-hidden border-y md:mt-[50px] lg:mb-0"
             style={{
                 backgroundColor: SLIDER_BACKGROUND_COLOR,
                 borderColor: SLIDER_SEPARATOR_COLOR,

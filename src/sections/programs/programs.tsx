@@ -14,7 +14,7 @@ const toHeadings = (html: string): string =>
                 text.length < 40 &&
                 text === text.toUpperCase() &&
                 !/[.:!?]$/.test(text);
-            return isHeading ? `<h3>${text}</h3>` : match;
+            return isHeading ? `<h3 class="programs-subheading">${text}</h3>` : match;
         }
     );
 
@@ -33,14 +33,14 @@ export default function Programs({ programs }: ProgramsProps) {
 
     return (
         <section
-            className="py-20 "
+            className="mt-[-100px] py-12 md:py-20"
             style={{
                 backgroundColor: PROGRAMS_BACKGROUND_COLOR,
                 color: PROGRAMS_TEXT_COLOR,
             }}
         >
             <div className="mx-auto w-full max-w-[1320px] px-5 lg:px-0">
-                <h2 className={`mb-8 ${PROGRAMS_TITLE_TYPOGRAPHY}`}>
+                <h2 className={`mb-10 md:mb-25 ${PROGRAMS_TITLE_TYPOGRAPHY}`}>
                     {program.title}
                 </h2>
 
