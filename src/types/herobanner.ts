@@ -5,6 +5,7 @@ export type HeroBannerProps = {
 
 import type { FounderData } from "@/src/types/founder";
 import type { ProgramData } from "@/src/types/programs";
+import type { TextSliderData } from "@/src/types/slider";
 
 export type FaqData = {
     question: string;
@@ -21,9 +22,5 @@ export type XSchoolData = {
     programs: ProgramData[];
     faq_title: string;
     xschool_faq: FaqData[];
-    text_slider: {
-        xline1: string;
-        xline2: string;
-        xline3: string;
-    };
+    text_slider: TextSliderData;
 };

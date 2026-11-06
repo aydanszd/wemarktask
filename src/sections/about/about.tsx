@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import AboutSlider from "@/src/ui/swiper/slider";
-import type { AboutProps } from "@/src/types/about";
+import type { AboutProps } from "@/src/types";
 import { ABOUT_BACKGROUND_COLOR, ABOUT_TEXT_COLOR } from "@/src/color";
 import { ABOUT_TITLE_TYPOGRAPHY } from "@/src/typography";
 
