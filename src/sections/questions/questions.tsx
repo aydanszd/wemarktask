@@ -47,7 +47,7 @@ export default function Faq({ title, items }: QuestionsProps) {
             className="hidden w-full py-20 lg:block lg:min-h-[1497px] lg:py-[120px] mt-20a"
             style={{ backgroundColor: FAQ_BACKGROUND_COLOR, color: FAQ_TEXT_COLOR }}
         >
-            <div className="mx-auto w-full max-w-[1317px] px-5 lg:px-0">
+            <div className="mx-auto w-full max-w-[1317px] px-5 lg:px-0 mt-30">
                 <h2 className={`mb-16 lg:mb-[80px] ${FAQ_TITLE_TYPOGRAPHY}`}>
                     {titleLines.map((line, index) => (
                         <span key={index} className="block">
