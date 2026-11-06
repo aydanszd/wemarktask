@@ -1,4 +1,4 @@
-import Header from "@/src/layout/Header/header";
+import Layout from "@/src/layout";
 import Banner from "@/src/sections/herobanner/hero";
 import { getXSchool } from "@/src/services";
 import About from "@/src/sections/about/about";
@@ -11,8 +11,7 @@ export default async function Home() {
   const data = await getXSchool();
 
   return (
-    <main className="relative bg-[#E0E0E0]">
-      <Header />
+    <Layout>
       <Banner title={data.banner_title} image={data.banner_image} />
       <About
         title={data.about_title}
@@ -23,6 +22,6 @@ export default async function Home() {
       <Programs programs={data.programs} />
       <Quotes textSlider={data.text_slider} />
       <Faq title={data.faq_title} items={data.xschool_faq} />
-    </main>
+    </Layout>
   );
 }
