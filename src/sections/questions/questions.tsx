@@ -75,7 +75,7 @@ export default function Faq({ title, items }: QuestionsProps) {
                                         aria-expanded={isOpen}
                                         aria-controls={panelId}
                                         onClick={() => setOpenIndex(isOpen ? null : i)}
-                                        className={`flex w-full items-center justify-between gap-6 py-6 text-left lg:py-10 ${FAQ_TEXT_TYPOGRAPHY}`}
+                                        className={`flex w-full cursor-pointer items-center justify-between gap-6 py-6 text-left lg:py-10 ${FAQ_TEXT_TYPOGRAPHY}`}
                                     >
                                         <span>{item.question}</span>
                                         <Icon open={isOpen} />
