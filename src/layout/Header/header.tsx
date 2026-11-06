@@ -4,12 +4,13 @@ import logo from "@/src/assets/logo (4).svg";
 import { HEADER_TEXT_COLOR } from "@/src/color";
 import { HEADER_LINKS } from "@/src/const";
 import { HEADER_LINK_TYPOGRAPHY } from "@/src/typography";
+import MobileMenu from "@/src/layout/Header/mobile-menu";
 
 export default function Header() {
     return (
         <header className="absolute inset-x-0 top-0 z-20">
-            <div className="mx-auto mt-6 flex h-9 w-[calc(100%-3rem)] max-w-330 items-center justify-between md:mt-10.5">
-                <Link href="/" aria-label="Wemark">
+            <div className="relative isolate mx-auto mt-6 flex h-9 w-[calc(100%-3rem)] max-w-[1320px] items-center justify-between md:mt-10.5">
+                <Link href="/" aria-label="Wemark" className="relative z-20">
                     <Image
                         src={logo}
                         alt="wemark"
@@ -20,7 +21,7 @@ export default function Header() {
                     />
                 </Link>
 
-                <nav className="hidden items-center gap-12.5 lg:flex ">
+                <nav className="hidden items-center gap-12.5 min-[769px]:flex">
                     {HEADER_LINKS.map((link) => (
                         <Link
                             key={link.label}
@@ -35,20 +36,13 @@ export default function Header() {
 
                 <Link
                     href="#contact"
-                    className={`hidden h-9 w-25 ${HEADER_LINK_TYPOGRAPHY} underline transition-opacity hover:opacity-70 lg:block`}
+                    className={`hidden h-[36px] w-[100px] ${HEADER_LINK_TYPOGRAPHY} underline transition-opacity hover:opacity-70 min-[769px]:block`}
                     style={{ color: HEADER_TEXT_COLOR }}
                 >
                     Let&apos;s Talk
                 </Link>
 
-                <button
-                    type="button"
-                    aria-label="Open menu"
-                    className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-                >
-                    <span className="h-0.5 w-6" style={{ backgroundColor: HEADER_TEXT_COLOR }} />
-                    <span className="h-0.5 w-6" style={{ backgroundColor: HEADER_TEXT_COLOR }} />
-                </button>
+                <MobileMenu />
             </div>
         </header>
     );
