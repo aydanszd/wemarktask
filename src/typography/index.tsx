@@ -18,3 +18,6 @@ export const ttHoves = localFont({
 });
 
 export const HEADER_LINK_TYPOGRAPHY = "text-[24px] font-medium";
+
+export const ABOUT_TITLE_TYPOGRAPHY =
+    "[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] text-[clamp(3rem,6.25vw,90px)] font-medium uppercase leading-[100px] tracking-normal align-middle";

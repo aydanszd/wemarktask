@@ -18,7 +18,7 @@ export default function Banner({ title, image }: HeroBannerProps) {
                 className="object-cover"
             />
 
-            <div className="relative z-10 mx-auto h-full w-[calc(100%-3rem)] max-w-[1320px] pt-50 md:pt-75">
+            <div className="relative z-10 mx-auto h-full w-[calc(100%-3rem)] max-w-330 pt-50 md:pt-75">
                 <h1 className="text-[clamp(2.5rem,8.056vw,116px)] font-normal uppercase leading-[1.0517] tracking-[-0.02em] text-[#E0E0E0] md:whitespace-nowrap">
                     {lines.map((line, i) => (
                         <span key={i} className={`block ${offsets[i] ?? ""}`}>

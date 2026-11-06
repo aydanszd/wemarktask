@@ -30,15 +30,15 @@ export default function AboutSlider({ images }: AboutSliderProps) {
                 0: { spaceBetween: 16 },
                 768: { spaceBetween: 48 },
             }}
-            className="mt-10 md:mt-[80px]"
+            className="mt-10 md:mt-20"
             aria-label="About xSchool gallery"
         >
             {images.map((item, i) => (
                 <SwiperSlide
                     key={item.image}
-                    className="!w-[85vw] md:!w-[865px]"
+                    className="w-[85vw]! md:w-216.25!"
                 >
-                    <div className="relative h-[48vw] w-full overflow-hidden md:h-[486px]">
+                    <div className="relative h-[48vw] w-full overflow-hidden md:h-121.5">
                         <Image
                             src={item.image}
                             alt=""
