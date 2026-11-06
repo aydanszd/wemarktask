@@ -19,13 +19,5 @@ export const ttHoves = localFont({
 
 export const HEADER_LINK_TYPOGRAPHY = "text-[24px] font-medium";
 
-export const ABOUT_TITLE_TYPOGRAPHY =
-    "[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] text-[clamp(3rem,6.25vw,90px)] font-medium uppercase leading-[100px] tracking-normal align-middle";
-
-export const FOUNDER_TITLE_TYPOGRAPHY =
-    "[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] text-[clamp(3rem,6.25vw,90px)] font-medium uppercase leading-[100px] tracking-normal align-middle";
-
-export const PROGRAMS_TITLE_TYPOGRAPHY = ABOUT_TITLE_TYPOGRAPHY;
-
-export const SLIDER_TEXT_TYPOGRAPHY =
-    "[font-family:var(--font-tt-hoves)] text-[60px] font-medium leading-[76px] tracking-[0] uppercase";
+export const HEADER_MENU_TYPOGRAPHY =
+    "[font-family:var(--font-tt-hoves)] text-[16px] font-medium leading-[28px] text-center align-middle";
