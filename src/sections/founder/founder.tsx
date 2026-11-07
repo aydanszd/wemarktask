@@ -26,7 +26,7 @@ export default function Founder({ founders }: FounderProps) {
                 >
                     Founder
                 </h2>
-                <div className="mt-[120px] space-y-[112px] md:mt-[112px]">
+                <div className="mt-[120px] space-y-[112px] md:mt-[20px]">
                     {founders.map((founder) => (
                         <article
                             key={founder.name}
