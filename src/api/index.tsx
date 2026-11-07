@@ -24,14 +24,14 @@ export async function apiGet<T>(
     try {
         response = await fetch(url, init);
     } catch (cause) {
-        throw new ApiError("API serverinə qoşulmaq mümkün olmadı.", undefined, {
+        throw new ApiError("Unable to connect to the API server.", undefined, {
             cause,
         });
     }
 
     if (!response.ok) {
         throw new ApiError(
-            `API sorğusu uğursuz oldu (HTTP ${response.status}).`,
+            `API request failed (HTTP ${response.status}).`,
             response.status,
         );
     }
@@ -39,7 +39,7 @@ export async function apiGet<T>(
     try {
         return (await response.json()) as T;
     } catch (cause) {
-        throw new ApiError("API cavabını oxumaq mümkün olmadı.", response.status, {
+        throw new ApiError("Unable to read the API response.", response.status, {
             cause,
         });
     }

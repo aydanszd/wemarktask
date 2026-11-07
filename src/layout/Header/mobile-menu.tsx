@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { HEADER_TEXT_COLOR } from "@/src/color";
-import { HEADER_LINKS } from "@/src/const";
+import { HEADER_LINKS } from "@/src/const/header";
 import { HEADER_LINK_TYPOGRAPHY, HEADER_MENU_TYPOGRAPHY } from "@/src/typography";
 
 export default function MobileMenu() {

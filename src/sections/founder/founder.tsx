@@ -19,14 +19,14 @@ export default function Founder({ founders }: FounderProps) {
             className="pb-[120px] md:pb-[260px]"
             style={{ backgroundColor: ABOUT_BACKGROUND_COLOR }}
         >
-            <div className="mx-auto max-w-[1440px] px-6 md:px-[60px]">
+            <div className="mx-auto max-w-[1320px] px-6 md:px-[60px]">
                 <h2
-                    className={FOUNDER_TITLE_TYPOGRAPHY}
+                    className={`${FOUNDER_TITLE_TYPOGRAPHY} text-left md:relative md:top-11`}
                     style={{ color: ABOUT_TEXT_COLOR }}
                 >
                     Founder
                 </h2>
-                <div className="mt-10 space-y-[112px] md:mt-[112px]">
+                <div className="mt-[120px] space-y-[112px] md:mt-[112px]">
                     {founders.map((founder) => (
                         <article
                             key={founder.name}

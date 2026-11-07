@@ -47,3 +47,8 @@ export const FOOTER_LINK_TYPOGRAPHY =
 
 export const FOOTER_BOTTOM_TYPOGRAPHY =
     "[font-family:var(--font-tt-hoves)] text-[16px] font-normal leading-[32px] uppercase";
+
+export const FOOTER_LINK_CLASS =
+    `${FOOTER_LINK_TYPOGRAPHY} opacity-50 transition-opacity duration-200 hover:opacity-100`;
+
+export const FOOTER_TITLE_CLASS = FOOTER_TITLE_TYPOGRAPHY;

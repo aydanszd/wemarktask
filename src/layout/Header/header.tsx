@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/src/assets/logo (4).svg";
 import { HEADER_TEXT_COLOR } from "@/src/color";
-import { HEADER_LINKS } from "@/src/const";
+import { HEADER_LINKS } from "@/src/const/header";
 import { HEADER_LINK_TYPOGRAPHY } from "@/src/typography";
 import MobileMenu from "@/src/layout/Header/mobile-menu";
 

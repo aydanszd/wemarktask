@@ -2,43 +2,12 @@ import Image from "next/image";
 import logo from "@/src/assets/logo (5).svg";
 import {
     FOOTER_BOTTOM_TYPOGRAPHY,
-    FOOTER_LINK_TYPOGRAPHY,
-    FOOTER_TITLE_TYPOGRAPHY,
+    FOOTER_LINK_CLASS,
+    FOOTER_TITLE_CLASS,
 } from "@/src/typography";
 import { FOOTER_BACKGROUND_COLOR, FOOTER_TEXT_COLOR } from "@/src/color";
 import BackToTop from "@/src/componetns/backtotop";
-
-type FooterLink = { label: string; href: string };
-type FooterColumn = { title: string; links: FooterLink[] };
-
-const COLUMNS: FooterColumn[] = [
-    {
-        title: "Sitemap",
-        links: [
-            { label: "Case Studies", href: "/case-studies" },
-            { label: "Services", href: "/services" },
-            { label: "About", href: "/about" },
-            { label: "Career", href: "/career" },
-            { label: "Blog", href: "/blog" },
-            { label: "News", href: "/news" },
-            { label: "Vacancies", href: "/vacancies" },
-        ],
-    },
-    {
-        title: "Follow Us On",
-        links: [
-            { label: "Instagram", href: "https://instagram.com" },
-            { label: "LinkedIn", href: "https://linkedin.com" },
-            { label: "YouTube", href: "https://youtube.com" },
-            { label: "Facebook", href: "https://facebook.com" },
-            { label: "Twitter", href: "https://twitter.com" },
-        ],
-    },
-];
-
-const linkClass = `${FOOTER_LINK_TYPOGRAPHY} opacity-50 transition-opacity duration-200 hover:opacity-100`;
-
-const titleClass = FOOTER_TITLE_TYPOGRAPHY;
+import { FOOTER_COLUMNS } from "@/src/const/footer";
 
 function GlobeIcon() {
     return (
@@ -70,17 +39,15 @@ export default function Footer() {
             }}
         >
             <div className="mx-auto w-full max-w-[1320px] px-5 pb-6 pt-12 lg:px-0 lg:pb-[37px] lg:pt-[70px]">
-                {/* Yuxarı sıra: sütunlar + ox */}
                 <div className="flex items-start justify-between gap-10">
-                    {/* Mobil: 2 sütunlu grid | Desktop: flex */}
                     <div className="grid w-full grid-cols-2 gap-x-6 gap-y-10 lg:flex lg:w-auto lg:gap-[83px]">
-                        {COLUMNS.map((col) => (
+                        {FOOTER_COLUMNS.map((col) => (
                             <nav key={col.title} aria-label={col.title}>
-                                <h3 className={titleClass}>{col.title}</h3>
+                            <h3 className={FOOTER_TITLE_CLASS}>{col.title}</h3>
                                 <ul className="mt-4 flex flex-col lg:mt-[30px]">
                                     {col.links.map((link) => (
                                         <li key={link.label}>
-                                            <a href={link.href} className={linkClass}>
+                                            <a href={link.href} className={FOOTER_LINK_CLASS}>
                                                 {link.label}
                                             </a>
                                         </li>
@@ -88,37 +55,31 @@ export default function Footer() {
                                 </ul>
                             </nav>
                         ))}
-
-                        {/* Mobildə tam en (2 sütunu tutur) */}
                         <div className="col-span-2 lg:col-span-1">
-                            <h3 className={titleClass}>For Partnerships</h3>
+                            <h3 className={FOOTER_TITLE_CLASS}>For Partnerships</h3>
                             <div className="mt-4 flex flex-col lg:mt-[30px]">
-                                <a href="mailto:partnership@wemark.az" className={linkClass}>
+                                <a href="mailto:partnership@wemark.az" className={FOOTER_LINK_CLASS}>
                                     partnership@wemark.az
                                 </a>
-                                <a href="tel:+994515555555" className={linkClass}>
+                                <a href="tel:+994515555555" className={FOOTER_LINK_CLASS}>
                                     +994 51 555 55 55
                                 </a>
                             </div>
                         </div>
 
                         <div className="col-span-2 lg:col-span-1">
-                            <h3 className={titleClass}>Office</h3>
+                            <h3 className={FOOTER_TITLE_CLASS}>Office</h3>
                             <address
-                                className={`mt-4 max-w-[200px] not-italic lg:mt-[30px] lg:w-[272px] lg:max-w-none ${linkClass} hover:opacity-50`}
+                                className={`mt-4 max-w-[200px] not-italic lg:mt-[30px] lg:w-[272px] lg:max-w-none ${FOOTER_LINK_CLASS} hover:opacity-50`}
                             >
                                 Alibeyov Gardashlari 27, Sabail, Sabah Residence
                             </address>
                         </div>
                     </div>
-
-                    {/* Yuxarı qayıt oxu: yalnız desktop */}
                     <div className="hidden lg:block">
                         <BackToTop />
                     </div>
                 </div>
-
-                {/* Mobil: dil seçimi xəttdən əvvəl */}
                 <button
                     type="button"
                     className={`mt-16 flex items-center gap-2 uppercase opacity-50 transition-opacity hover:opacity-100 lg:hidden ${FOOTER_BOTTOM_TYPOGRAPHY}`}
@@ -128,11 +89,7 @@ export default function Footer() {
                     <span className="h-4 w-px bg-current opacity-50" aria-hidden="true" />
                     <span>English</span>
                 </button>
-
-                {/* Xətt */}
                 <div className="mt-6 h-px w-full bg-[#e0e0e0]/30 lg:mt-[53px]" />
-
-                {/* Logo */}
                 <div className="mt-10 flex justify-center lg:mt-[61px]">
                     <Image
                         src={logo}
@@ -142,8 +99,6 @@ export default function Footer() {
                         className="h-auto w-full max-w-[970px]"
                     />
                 </div>
-
-                {/* Alt sıra */}
                 <div className="mt-10 flex items-center justify-between lg:mt-[68px]">
                     <div
                         className={`flex flex-wrap items-center gap-x-5 uppercase opacity-50 lg:normal-case ${FOOTER_BOTTOM_TYPOGRAPHY}`}
