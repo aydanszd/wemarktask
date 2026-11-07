@@ -26,7 +26,7 @@ export const ABOUT_TITLE_TYPOGRAPHY =
     "[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] text-[clamp(3rem,6.25vw,90px)] font-medium uppercase leading-[100px] tracking-normal align-middle";
 
 export const FOUNDER_TITLE_TYPOGRAPHY =
-    "[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] text-[24px] font-medium uppercase leading-[1.3] tracking-normal align-middle md:text-[clamp(3rem,6.25vw,90px)] md:leading-[100px]";
+    "[font-family:var(--font-tt-hoves)] text-[24px] font-medium uppercase leading-[36px] tracking-normal align-middle md:[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] md:text-[clamp(3rem,6.25vw,90px)] md:leading-[100px]";
 
 export const PROGRAMS_TITLE_TYPOGRAPHY =
     "[font-family:'TT_Firs_Neue_Trl',var(--font-tt-hoves),sans-serif] text-[24px] font-medium uppercase leading-[1.3] tracking-normal align-middle md:text-[clamp(3rem,6.25vw,90px)] md:leading-[100px]";

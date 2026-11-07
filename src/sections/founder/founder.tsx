@@ -16,7 +16,7 @@ export default function Founder({ founders }: FounderProps) {
     return (
         <section
             id="founder"
-            className="pb-[120px] md:pb-[260px]"
+            className="pb-[96px] md:pb-[260px]"
             style={{ backgroundColor: ABOUT_BACKGROUND_COLOR }}
         >
             <div className="mx-auto max-w-[1320px] px-6 md:px-[60px]">
@@ -26,7 +26,7 @@ export default function Founder({ founders }: FounderProps) {
                 >
                     Founder
                 </h2>
-                <div className="mt-[120px] space-y-[112px] md:mt-[20px]">
+                <div className="mt-[100px] space-y-[112px] md:mt-[20px]">
                     {founders.map((founder) => (
                         <article
                             key={founder.name}

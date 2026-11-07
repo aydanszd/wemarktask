@@ -18,7 +18,7 @@ export default function About({ title, description, images }: AboutProps) {
     return (
         <section
             id="about"
-            className="pb-30 pt-20 md:pb-62.5 md:pt-37.5"
+            className="pb-20 pt-20 md:pb-62.5 md:pt-37.5"
             style={{ backgroundColor: ABOUT_BACKGROUND_COLOR }}
         >
             <div className="mx-auto max-w-360 px-6 md:px-15">
